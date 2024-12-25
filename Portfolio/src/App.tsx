@@ -1,13 +1,23 @@
-import Home from "./Screens/Home"
-function App() {
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import NavBar from './components/NavBar';
+import Home from './Screens/Home';
 
-  return (
-    <>
-      <div className="bg-zinc-950 min-h-screen overflow-hidden">
-        <Home />
-      </div>
-    </>
-  )
-}
+const App = () => {
+    return (
+        <Router>
+            <div className="flex min-h-screen bg-zinc-900">
+                {/* Navbar */}
+                <NavBar />
 
-export default App
+                {/* Main Content */}
+                <div className="flex-grow p-4">
+                    <Routes>
+                        <Route path="/" element={<Home />} />
+                    </Routes>
+                </div>
+            </div>
+        </Router>
+    );
+};
+
+export default App;
