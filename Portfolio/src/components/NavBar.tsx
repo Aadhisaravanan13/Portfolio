@@ -1,5 +1,4 @@
 import { useState } from 'react';
-import { Link } from 'react-router-dom';
 
 // Import icons
 import homeIcon from '../assets/home.png';
@@ -9,10 +8,10 @@ import contactIcon from '../assets/envelope.png';
 
 export default function NavBar() {
     const navIcons = [
-        { id: 1, icon: homeIcon, path: '/', label: 'Home' },
-        { id: 2, icon: aboutIcon, path: '/about', label: 'About' },
-        { id: 3, icon: myWorksIcon, path: '/works', label: 'My Works' },
-        { id: 4, icon: contactIcon, path: '/contact', label: 'Contact' },
+        { id: 1, icon: homeIcon, label: 'Home', target: 'home' },
+        { id: 2, icon: aboutIcon, label: 'About', target: 'about' },
+        { id: 3, icon: myWorksIcon, label: 'My Works', target: 'works' },
+        { id: 4, icon: contactIcon, label: 'Contact', target: 'contact' },
     ];
 
     const [isSelected, setSelected] = useState(1);
@@ -20,16 +19,16 @@ export default function NavBar() {
     return (
         <div className="fixed top-0 right-0 h-full flex flex-col justify-center items-center space-y-4 p-4">
             {navIcons.map((item) => (
-                <Link
+                <a
                     key={item.id}
-                    to={item.path}
+                    href={`#${item.target}`}
                     onClick={() => setSelected(item.id)}
                     className={`p-3 rounded-full ${
                         isSelected === item.id ? 'bg-yellow-500' : 'bg-zinc-800'
                     } hover:scale-110 transform transition duration-200`}
                 >
                     <img src={item.icon} alt={item.label} className="h-6 w-6" />
-                </Link>
+                </a>
             ))}
         </div>
     );
