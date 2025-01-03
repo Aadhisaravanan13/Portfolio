@@ -1,8 +1,9 @@
+import Home from "./Home"
 
 function About() {
   return (
 <>
-<p>About</p>
+<Home />
 </> 
  )
 }
