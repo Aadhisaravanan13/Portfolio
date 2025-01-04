@@ -1,7 +1,10 @@
+import Home from "./Home"
 
 function Works() {
   return (
-    <div>Works</div>
+    <>
+    <Home />
+    </>
   )
 }
 

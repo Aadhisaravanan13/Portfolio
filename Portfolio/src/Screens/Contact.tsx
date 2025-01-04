@@ -1,7 +1,10 @@
+import Home from "./Home"
 
 function Contact() {
   return (
-    <div>Contact</div>
+    <>
+    <Home />
+    </>
   )
 }
 
