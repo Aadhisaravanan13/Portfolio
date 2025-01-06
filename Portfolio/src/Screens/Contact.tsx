@@ -1,9 +1,9 @@
-import Home from "./Home";
+// import Home from "./Home";
 
 function Contact() {
   return (
     <>
-      <Home />
+      {/* <Home /> */}
     </>
   );
 }

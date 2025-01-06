@@ -3,7 +3,7 @@
   export default function Home() {
     const description: any = () => {
       return (
-        <p className="text-white text-center sm:text-start flex justify-center sm:justify-center   pb-5 text-sm sm:text-base md:text-lg">
+        <p className="text-white text-center sm:text-start flex justify-center sm:justify-center pb-5 text-sm sm:text-base md:text-lg">
           <br /> I'm a passionate Frontend Developer with expertise in ReactJS and
           React Native,
           <br /> crafting dynamic web and mobile applications. I deliver engaging,
