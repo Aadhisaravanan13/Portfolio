@@ -6,22 +6,22 @@ import Works from './Screens/Works';
 
 const App = () => {
     return (
-        <div className="flex min-h-screen bg-zinc-950 ">
+        <div className="flex min-h-screen bg-zinc-950 relative">
             {/* Navbar */}
             <NavBar />
 
             {/* Main Content */}
-            <div className="flex-grow p-4 space-y-10">
+            <div className="flex-grow p-4 space-y-10 overflow-y-auto">
                 <section id="home">
                     <Home />
                 </section>
-                <section id="about">
+                <section id="about" className="min-h-screen">
                     <About />
                 </section>
-                <section id="works">
+                <section id="works" className="min-h-screen flex items-center justify-center">
                     <Works />
                 </section>
-                <section id="contact">
+                <section id="contact" className="min-h-screen flex items-center justify-center">
                     <Contact />
                 </section>
             </div>
