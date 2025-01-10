@@ -16,19 +16,26 @@ export default function NavBar() {
 
     const [isSelected, setSelected] = useState(1);
 
+    const handleScroll = (targetId: any) => {
+        const section = document.getElementById(targetId);
+        if (section) {
+            section.scrollIntoView({ behavior: 'smooth' }); // Smooth scroll to section
+            setSelected(navIcons.find((icon) => icon.target === targetId)?.id ?? 0); // Update selected state
+        }
+    };
+
     return (
-        <div className="fixed top-0 right-0 h-full flex flex-col justify-center items-center space-y-4 p-4 ">
+        <div className="fixed top-0 right-0 h-full flex flex-col justify-center items-center space-y-4 p-4">
             {navIcons.map((item) => (
-                <a
+                <button
                     key={item.id}
-                    href={`#${item.target}`}
-                    onClick={() => setSelected(item.id)}
-                    className={`p-3 rounded-full ${
+                    onClick={() => handleScroll(item.target)}
+                    className={`p-3 rounded-full cursor-pointer ${
                         isSelected === item.id ? 'bg-yellow-500' : 'bg-zinc-800'
                     } hover:scale-125 transform transition duration-200`}
                 >
                     <img src={item.icon} alt={item.label} className="h-6 w-6" />
-                </a>
+                </button>
             ))}
         </div>
     );

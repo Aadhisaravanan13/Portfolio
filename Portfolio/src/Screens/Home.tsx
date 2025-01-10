@@ -3,7 +3,7 @@
   export default function Home() {
     const description: any = () => {
       return (
-        <p className="text-white text-center sm:text-start flex justify-center sm:justify-center   pb-5 text-sm sm:text-base md:text-lg">
+        <p className="text-white text-center sm:text-start flex justify-center sm:justify-center pb-5 text-sm sm:text-base md:text-lg">
           <br /> I'm a passionate Frontend Developer with expertise in ReactJS and
           React Native,
           <br /> crafting dynamic web and mobile applications. I deliver engaging,
@@ -38,9 +38,7 @@
 
           <button
             className="bg-transparent p-2 flex justify-between items-center text-white font-semibold   
-              rounded-full border-2 border-white hover:border-yellow-400 mt-4"
-              onClick={() => window.location.href = "#about"}
-          >
+              rounded-full border-2 border-white hover:border-yellow-400 mt-4">
             <p className="pl-2">MORE ABOUT ME</p>
             <div className="pl-5">
               <img
