@@ -6,7 +6,7 @@ import Works from './Screens/Works';
 
 const App = () => {
     return (
-        <div className="flex min-h-screen bg-zinc-900 ">
+        <div className="flex min-h-screen bg-zinc-950 ">
             {/* Navbar */}
             <NavBar />
 
