@@ -30,7 +30,7 @@ export default function NavBar() {
                 <button
                     key={item.id}
                     onClick={() => handleScroll(item.target)}
-                    className={`p-3 rounded-full ${
+                    className={`p-3 rounded-full cursor-pointer ${
                         isSelected === item.id ? 'bg-yellow-500' : 'bg-zinc-800'
                     } hover:scale-125 transform transition duration-200`}
                 >
