@@ -16,13 +16,15 @@ export default function NavBar() {
 
     const [isSelected, setSelected] = useState(1);
 
-    const handleScroll = (targetId: any) => {
-        const section = document.getElementById(targetId);
+    const handleScroll = (targetId: string) => {
+        const section = document.querySelector<HTMLElement>(`#${targetId}`);
         if (section) {
-            section.scrollIntoView({ behavior: 'smooth' }); // Smooth scroll to section
-            setSelected(navIcons.find((icon) => icon.target === targetId)?.id ?? 0); // Update selected state
+            section.scrollIntoView({ behavior: 'smooth' });
+            const selectedIcon = navIcons.find((icon) => icon.target === targetId)?.id ?? 1;
+            setSelected(selectedIcon);
         }
     };
+    
 
     return (
         <div className="fixed top-0 right-0 h-full flex flex-col justify-center items-center space-y-4 p-4">
