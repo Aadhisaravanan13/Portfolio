@@ -192,16 +192,16 @@ function PersonalInfos() {
   };
   return (
     <>
-      <div className="flex-col p-10 relative">
+      <div className="flex-col p-10 relative max-w-full">
         <div>{headers()}</div>
-        <h2 className=" text-gray-100 text-xl font-semibold pt-16 pb-10 ">
+        <h2 className=" text-gray-100 text-xl font-semibold pt-16 pb-10 pl-10 ">
           PERSONAL INFOS
         </h2>
-        <div className="flex ">
+        <div className="flex pl-10">
           <div className="flex">{personalDetailsList()}</div>
           <div className="flex-col">{informationChart()}</div>
         </div>
-        <div>{Button()}</div>
+        <div className="pl-10">{Button()}</div>
       </div>
     </>
   );
