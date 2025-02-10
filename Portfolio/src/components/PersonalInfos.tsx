@@ -4,7 +4,7 @@ function PersonalInfos() {
     return (
       <>
         <div className="flex justify-center">
-          <header className="text-zinc-900 text-7xl font-bold tracking-widest opacity-80">
+          <header className="text-zinc-800 text-7xl font-bold tracking-widest opacity-80">
             RESUME
           </header>
           <h1 className="text-white text-4xl font-bold absolute top-20 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-10">

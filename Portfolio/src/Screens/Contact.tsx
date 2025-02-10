@@ -1,9 +1,9 @@
-// import Home from "./Home";
+import ContactInfo from "../components/ContactInfo";
 
 function Contact() {
   return (
     <>
-      {/* <Home /> */}
+      <ContactInfo />
     </>
   )
 }
