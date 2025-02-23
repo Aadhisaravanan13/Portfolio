@@ -5,6 +5,9 @@ import twiter from "../assets/twitter.png";
 import linked from "../assets/linkedin.png";
 import insta from "../assets/instagram.png";
 import facebook from "../assets/facebook.png";
+import ContactForm from "./ContactForm";
+// import Download from "../assets/Download.png";
+
 
 function ContactInfo() {
     const headers: any = () => {
@@ -22,7 +25,7 @@ function ContactInfo() {
     const titles: any = () => {
         return (
             <div className="pt-14">
-                <h1 className="text-xl text-white font-semibold">Reach Me Out <br /> Here!</h1>
+                <h1 className="text-xl text-white font-semibold">Reach Me Out Here!</h1>
                 <p className="text-md text-white pt-3 line">◉ &nbsp;Have a question or idea? Let’s connect! Whether <br />
                     &nbsp; &nbsp;&nbsp; for a project or a chat, I’d love to hear from you! <br />
                     &nbsp; &nbsp;&nbsp; Let's connect and make something great together!</p>
@@ -46,7 +49,7 @@ function ContactInfo() {
                 {
                     infos.map((item: any) => {
                         return (
-                            <div className="flex pt-10" key={item.id} >
+                            <div className="flex pt-6" key={item.id} >
                                 <img src={item.icon} className="h-8 w-8" />
                                 <div className="flex-col pl-7">
                                     <div className="text-zinc-500 text-xl font-semibold">{item.title}</div>
@@ -68,41 +71,65 @@ function ContactInfo() {
             </>
         )
     }
-    const inputs1: any = [
-        { id: 1, placeholder: "Your Name", },
-        { id: 2, placeholder: "Your Email", },
-    ]
+    // const inputs1: any = [
+    //     { id: 1, placeholder: "Your Name", },
+    //     { id: 2, placeholder: "Your Email", },
+    // ]
+    // const Button: any = () => {
+    //     return (
+    //         <>
+    //             <a
+    //                 href="mailto:mr.aadhi2005@gmail.com"
+    //                 className="bg-transparent p-2 flex items-center text-white font-semibold   
+    //                          rounded-full border border-white hover:border-yellow-400"
+    //             >
+    //                 <p className="pl-2">Send Message</p>
+    //                 <div className="pl-5">
+    //                     <img
+    //                         src={Download}
+    //                         height={30}
+    //                         width={30}
+    //                         className="bg-yellow-500 rounded-3xl p-1 hover:scale-150 transition-transform duration-200"
+    //                         alt="Right Arrow"
+    //                     />
+    //                 </div>
+    //             </a>
+
+    //         </>
+    //     );
+    // };
     return (
         <>
             <div>{headers()}</div>
-            <div className="relative flex justify-around p-10 px-20">
+            <div className="relative flex justify-around p-10 px-10">
                 <div>
                     {titles()}
                     {reahMeOut()}
                 </div>
                 <div className="pt-14 flex-col">
-                    <div className="flex justify-between gap-10">
+                    {/* <div className="flex justify-between gap-10">
                         {inputs1.map((item: any) => {
                             return (
                                 <input
                                     type={item.id === 1 ? "text" : "email"}
                                     placeholder={item.placeholder}
-                                    className={`border-none bg-zinc-800  rounded-3xl w-64 p-2 focus:outline-none text-white pl-5`} />
+                                    className={`border-none bg-zinc-800  rounded-3xl w-64 p-4 focus:outline-none text-white pl-5`} />
                             )
                         })}
                     </div>
                     <div className="pt-8">
                         <input type="text" placeholder={"Your Subject"}
-                            className={`border-0 bg-zinc-800  rounded-3xl w-full p-2 focus:outline-none text-white pl-5`} />
+                            className={`border-0 bg-zinc-800  rounded-3xl w-full p-4 focus:outline-none text-white pl-5`} />
                     </div>
                     <div className="pt-8">
                         <textarea
                             placeholder={"Your Message"}
-                            className={`border-0 bg-zinc-800 rounded-3xl w-full max-h-44 h-44 p-2 focus:outline-none text-white pl-5`} />
+                            className={`border-0 bg-zinc-800 rounded-3xl w-full max-h-44 min-h-44 p-4 focus:outline-none text-white pl-5`} />
                     </div>
-                    <div className="flex justify-center gap-4 mt-10">
-                        <button className="border-0 bg-yellow-500  rounded-3xl w-32 h-10 text-white font-bold focus:outline-none">SEND MESSAGE</button>
-                    </div>
+                    <div className="flex justify-start ml-5 gap-4 mt-7">
+                        {Button()}
+                    </div> */}
+                    {ContactForm()}
                 </div>
 
             </div>
