@@ -107,7 +107,7 @@ function PersonalInfos() {
           <div>
             <div className="flex flex-col">
               <div className="flex pb-1">
-                <p className="text-yellow-500 text-4xl font-semibold"> 5</p>
+                <p className="text-yellow-500 text-4xl font-semibold"> 3</p>
                 <p className="text-2xl text-yellow-500">+</p>
               </div>
               <div className="flex justify-between items-center">
@@ -175,6 +175,7 @@ function PersonalInfos() {
         <button
           className="bg-transparent p-2 flex justify-between items-center text-white font-semibold   
               rounded-full border border-white hover:border-yellow-400 mt-4"
+              onClick={() => window.open("https://drive.google.com/file/d/1-8j6D4K80j484u_k98_9-5649f5738/view?usp=sharing")}
         >
           <p className="pl-2">DOWNLOAD CV</p>
           <div className="pl-5">
